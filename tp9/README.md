@@ -2,10 +2,15 @@
 
 1. Créez un nouveau dashboard
 2. Ajoutez un panel avec un graphique du taux d'opérations READ
+
 `mysql_global_status_commands_total{command="select"}`
+
 3. Ajoutez un panel qui affiche simplement le nombre total de tentatives de connexion refusées
+
 `mysql_global_status_aborted_connects`
+
 4. Ajoutez un panel sous forme de compteur (gauge) qui affiche le temps nécéssaire à l'exporter pour scrapper les données liées aux connections depuis le serveur MariaDB, trouvez un format et des limites adaptées.
+
 `mysql_exporter_collector_duration_seconds{collector="connection"}`
 
 
