@@ -1,0 +1,38 @@
+
+version: '3.7'
+
+services:
+  maria:
+    image: mariadb:10.4
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: database
+    ports:
+      - 3306:3306
+    volumes:
+      - ./master:/var/lib/mysql
+      - ./backups:/backups
+      - ./scripts:/scripts
+      - ./dumps:/dumps
+  prometheus:
+    image:  prom/prometheus
+    restart: on-failure
+    volumes:
+      - ./configs/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+  mysql_exporter:
+    image: prom/mysqld-exporter
+    restart: on-failure
+    ports:
+      - 9104:9104
+    environment: 
+      - DATA_SOURCE_NAME=verner:password@(maria:3306)/
+    depends_on:
+      - maria
+  grafana:
+    image: grafana/grafana
+    restart: on-failure
+    ports:
+      - 3001:3000
