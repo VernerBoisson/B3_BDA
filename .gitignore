@@ -1,3 +1,9 @@
+# TP 5
+tp5/mysql
+tp5/maria
+tp5/scripts/
+tp5/backups/
+
 # TP 6
 tp6/master
 tp6/slave
