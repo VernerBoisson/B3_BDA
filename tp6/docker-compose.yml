@@ -1,0 +1,22 @@
+
+version: '3.7'
+
+services:
+  master:
+    image: mariadb:10.4
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./configs/master.cnf:/etc/mysql/mariadb.conf.d/master.cnf
+      - ./scripts:/scripts
+      - ./master:/var/lib/mysql
+  slave:
+    image: mariadb:10.4
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./configs/slave.cnf:/etc/mysql/mariadb.conf.d/slave.cnf
+      - ./scripts:/scripts
+      - ./slave:/var/lib/mysql

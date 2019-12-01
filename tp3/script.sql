@@ -1,4 +1,4 @@
-DROP DATABASE teams;
+DROP DATABASE IF EXISTS teams;
 CREATE DATABASE teams;
 USE teams;
 CREATE TABLE games (match_date DATE,
@@ -11,8 +11,8 @@ CREATE TABLE players (firstname VARCHAR(50),
                     start_date DATE
 );
 
-DROP USER 'manager'@'%';
-DROP USER 'recruiter'@'%';
+DROP USER IF EXISTS 'manager'@'%';
+DROP USER IF EXISTS 'recruiter'@'%';
 
 CREATE USER 'manager'@'%' IDENTIFIED by 'manager_password';
 GRANT ALL PRIVILEGES ON games TO 'manager'@'%';

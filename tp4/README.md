@@ -32,4 +32,6 @@ bzip2 -z /backups/all_databases.sql
 endscript
 }
 ```
+Si le fichier n'existe pas, il y aura une erreur.
+
 `touch /backups/all_databases.sql.bz2`

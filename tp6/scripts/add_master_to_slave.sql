@@ -1,0 +1,8 @@
+CHANGE MASTER TO
+    MASTER_HOST='master',
+    MASTER_USER='replicant',
+    MASTER_PASSWORD='replicant_password',
+    MASTER_PORT=3306,
+    MASTER_LOG_FILE='master1-bin.000002',
+    MASTER_LOG_POS=2797647,
+    MASTER_CONNECT_RETRY=10;
