@@ -1,4 +1,4 @@
-# Mise en place d'un cluster Galera
+# Mise en place d'un cluster Galera
 
 1. Instanciez 3 serveurs maria
 2. Assurez vous que les serveurs puissent communiquer entre eux en ajoutant la configuration nécéssaire dans les docker-compose
