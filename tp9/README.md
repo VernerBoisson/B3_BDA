@@ -13,7 +13,7 @@
 
 `mysql_exporter_collector_duration_seconds{collector="connection"}`
 
-
+![screen_shot1](./images/Screenshot_2019-11-25&#32;graph&#32;select&#32;-&#32;Grafana.png)
 
 Importez ce dump de base de données et ajoutez le en tant que source dans votre instance grafana
 
@@ -60,3 +60,5 @@ WHERE
 GROUP BY 1
 ORDER BY $__timeGroup(created_at,$__interval)
 ```
+
+![screen_shot2](./images/Screenshot_2019-11-25&#32;New&#32;dashboard&#32;-&#32;Grafana.png)
