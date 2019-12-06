@@ -1,0 +1,11 @@
+binlog_format=ROW
+default-storage-engine=innodb
+innodb_autoinc_lock_mode=2
+wsrep_on=ON
+wsrep_provider=/usr/lib/galera/libgalera_smm.so
+
+wsrep_cluster_name="maria_cluster"
+wsrep_cluster_address="gcomm://maria1,maria2,maria3"
+
+wsrep_node_address="maria1"
+wsrep_node_name="node1"

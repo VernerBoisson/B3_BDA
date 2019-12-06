@@ -5,6 +5,8 @@
 Créez une image Docker qui contient tous les outils nécéssaires pour mettre en place un système de backup automatique. Vous trouverez des ressources dans le TP 2 et 3 du cours de devops.
 Vous pouvez créer votre image en local dans ce cas vous devez me faire parvenir le contenu de votre Dockerfile sinon vous pouvez vous créer un compte sur Docker Hub et uploader votre image dessus, dans ce cas veuillez me donner le lien publique vers votre image.
 
+J'ai utilisé l'image `debst/mysql_dba:1.0.1`
+
 ## Deuxième partie :
 
 Mettez en place une stategie de backups grâce à cron qui génère un dump de la base de données tous les lundis à 17h et génère un fichier comprèssé en format gzip contenant la date de création.

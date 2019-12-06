@@ -1,0 +1,2 @@
+wsrep_node_address="maria3"
+wsrep_node_name="node3"

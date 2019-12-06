@@ -7,13 +7,40 @@ services:
     restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 22201:3306
+    networks:
+      - internal
+    volumes:
+      - ./maria1:/var/lib/mysql
+      - ./backups:/backups
+      - ./configs:/configs
   maria2:
     image: mariadb:10.4
     restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 22202:3306
+    networks:
+      - internal
+    volumes:
+      - ./maria2:/var/lib/mysql
+      - ./backups:/backups
+      - ./configs:/configs
   maria3:
     image: mariadb:10.4
     restart: on-failure
     environment:
       MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 22203:3306
+    networks:
+      - internal
+    volumes:
+      - ./maria3:/var/lib/mysql
+      - ./backups:/backups
+      - ./configs:/configs
+
+networks:
+  internal:

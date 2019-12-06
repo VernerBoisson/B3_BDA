@@ -17,5 +17,5 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./maria:/var/lib/mysql
       - ./backups:/backups
