@@ -11,4 +11,4 @@ Ce répertoire contient mes devoirs du module d'admin de base de donnée de Bach
 - [`TP 7 - Mise en place d'un cluster Galera`](https://github.com/VernerBoisson/B3_DBA/tree/master/tp7)
 - [`TP 8 - Monitoring avec Prometheus`](https://github.com/VernerBoisson/B3_DBA/tree/master/tp8)
 - [`TP 9 - Créer des dashboard avec Grafana`](https://github.com/VernerBoisson/B3_DBA/tree/master/tp9)
-- [`TP 10 - `](https://github.com/VernerBoisson/B3_DBA/tree/master/tp10)
+- [`TP 10 - Envoyer une alerte `](https://github.com/VernerBoisson/B3_DBA/tree/master/tp10)
