@@ -1,2 +1,13 @@
+[mariadb]
+wsrep_cluster_address="gcomm://maria1,maria2,maria3"
+wsrep_provider= "/usr/lib/libgalera_smm.so"
+
 wsrep_node_address="maria2"
-wsrep_node_name="node2"
+wsrep_node_name="Node2"
+
+binlog_format=ROW
+default_storage_engine=InnoDB
+innodb_autoinc_lock_mode=2
+innodb_doublewrite=1
+query_cache_size=0
+wsrep_on=ON
